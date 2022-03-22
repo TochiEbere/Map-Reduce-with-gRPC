@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package worker_package;
+
+service Worker {
+    rpc SetDriverPort(DriverPort) returns (Status);
+    rpc Map(MapInput) returns (Status);
+    rpc Reduce(ReduceId) returns (Status);
+}
+
+message DriverPort {
+    int32 port = 1;
+}
+
+message Status {
+    int32 msg = 1;
+    int32 code = 2;
+}
+
+message MapInput {
+    string file_path = 1;
+    int32 map_id = 2;
+    int32 m = 3;
+}
+
+message ReduceId {
+    int32 reduce_id = 1;
+}
+
+message Empty {}
