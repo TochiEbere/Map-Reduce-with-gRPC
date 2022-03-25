@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package driver_package;
+package driverpackage;
 
 service Driver {
-    rpc launch(Data) returns (Status);
+    rpc Start(Data) returns (Status);
 }
 
 message Data {
