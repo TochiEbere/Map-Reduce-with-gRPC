@@ -1,3 +1,5 @@
+## MapReduce with gRPC
+
 This is a distributed MapReduce program to solve the word count problem using python and gRPC.
 
 It contains 3 main python file: driver.py, worker.py, and client.py.
